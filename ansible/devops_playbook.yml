@@ -1,0 +1,11 @@
+---
+- name: update localhost
+  hosts: localhost
+  become: true
+
+  tasks:
+  - name: ensure git is installed
+    ansible.builtin.package:
+      name: git
+      state: latest
+...
